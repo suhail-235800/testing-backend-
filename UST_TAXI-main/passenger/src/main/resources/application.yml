@@ -1,3 +1,6 @@
+server:
+  port: 9012
+
 spring:
   application:
     name: passenger
