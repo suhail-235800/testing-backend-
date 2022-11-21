@@ -1,4 +1,3 @@
 FROM openjdk:11
-EXPOSE 8080
 ADD target/service-registry.jar service-registry.jar
-ENTRYPOINT ["java","-jar","/service-registry.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/service-registry.jar"]

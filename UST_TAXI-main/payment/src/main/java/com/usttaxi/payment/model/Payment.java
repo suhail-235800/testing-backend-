@@ -19,8 +19,10 @@ public class Payment {
 	
 	@Id
 	
-	private int tripid;
+	
+	@GeneratedValue
 	private int pay_id;
+	private int tripid;
 	private String pay_method;
 	private int fee;
 

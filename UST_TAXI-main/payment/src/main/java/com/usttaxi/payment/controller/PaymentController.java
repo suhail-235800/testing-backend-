@@ -36,9 +36,6 @@ public class PaymentController {
 	@GetMapping("/{tripid}")     
     public ResponseTemplateVO getTripDetails(@PathVariable("tripid") int tripid) {
 		
-		 
-
-
         return paymentService.getTripDetails(tripid);
 
 }

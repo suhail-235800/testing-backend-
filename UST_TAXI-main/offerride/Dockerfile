@@ -1,4 +1,5 @@
 FROM openjdk:11
-EXPOSE 8080
+VOLUME /tmp
 ADD target/offerride.jar offerride.jar
-ENTRYPOINT ["java","-jar","/offerride.jar"]
+COPY dockerize dockerize
+CMD ./dockerize -wait tcp://usttaxi-db.ci7lpyvltlok.ap-northeast-1.rds.amazonaws.com:3306 -timeout 15m java -Djava.security.egd=file:/dev/./urandom -jar /offerride.jar
