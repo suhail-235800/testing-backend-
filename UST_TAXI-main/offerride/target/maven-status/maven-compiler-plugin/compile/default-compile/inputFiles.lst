@@ -1,6 +1,7 @@
 E:\Final\UST_TAXI-main\offerride\src\main\java\com\example\spring\offerride\OfferrideApplication.java
+E:\Final\UST_TAXI-main\offerride\src\main\java\com\example\spring\offeride\vo\Passenger.java
 E:\Final\UST_TAXI-main\offerride\src\main\java\com\example\spring\offerride\model\OfferRide.java
 E:\Final\UST_TAXI-main\offerride\src\main\java\com\example\spring\offerride\repository\OfferRideRepository.java
-E:\Final\UST_TAXI-main\offerride\src\main\java\SwaggerConfig.java
+E:\Final\UST_TAXI-main\offerride\src\main\java\com\example\spring\offeride\vo\ResponseTemplateVO.java
 E:\Final\UST_TAXI-main\offerride\src\main\java\com\example\spring\offerride\controller\OfferRideController.java
 E:\Final\UST_TAXI-main\offerride\src\main\java\com\example\spring\offerride\ResourceNotFoundException.java

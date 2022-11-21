@@ -1,6 +1,0 @@
-com\example\spring\offerride\OfferrideApplication.class
-com\example\spring\offerride\repository\OfferRideRepository.class
-com\example\spring\offerride\controller\OfferRideController.class
-com\example\spring\offerride\model\OfferRide.class
-SwaggerConfig.class
-com\example\spring\offerride\ResourceNotFoundException.class
