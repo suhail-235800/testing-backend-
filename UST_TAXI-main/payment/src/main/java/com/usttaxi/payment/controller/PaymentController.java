@@ -16,10 +16,8 @@ import com.usttaxi.payment.service.PaymentService;
 
 
 
-
 @RestController
 @RequestMapping("/payment")
-
 public class PaymentController {
 	
 	@Autowired
@@ -33,10 +31,13 @@ public class PaymentController {
 	        return paymentRepo.save(payment);
 	    }
 	
-	@GetMapping("/{tripid}")     
-    public ResponseTemplateVO getTripDetails(@PathVariable("tripid") int tripid) {
+	@GetMapping("/{tripid}/{payid}")     
+    public ResponseTemplateVO getTripDetails(@PathVariable("tripid") int tripid ,@PathVariable("payid") int payid) {
 		
-        return paymentService.getTripDetails(tripid);
+		
+
+
+        return paymentService.getTripDetails(tripid,payid);
 
 }
 }	
