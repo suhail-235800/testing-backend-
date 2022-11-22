@@ -1,6 +1,8 @@
 server:
   port: 9000
 
+ 
+
 spring:
   application:
     name: API-GATEWAY
@@ -50,6 +52,8 @@ spring:
                 name: login-service
                 fallbackuri: forward:/loginServiceFallBack
 
+ 
+
 
 hystrix:
   command:
@@ -59,12 +63,22 @@ hystrix:
           thread:
             timeoutInMilliseconds: 4000
 
+ 
+
 
 management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: prometheus,
+                 hystrix.stream
+        
+        
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
 eureka:
   instance:
     hostname: localhost
