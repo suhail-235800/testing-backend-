@@ -22,7 +22,7 @@ public class OfferRide {
     private String name;    
     private String phone;
     private String v_no;
-    private String start_point;
+    private String start;
     private String dest_point;
     private String start_time;
     private String dest_time;
@@ -48,12 +48,7 @@ public class OfferRide {
     public void setV_no(String v_no) {
         this.v_no = v_no;
     }
-    public String getStart_point() {
-        return start_point;
-    }
-    public void setStart_point(String start_point) {
-        this.start_point = start_point;
-    }
+  
     public String getDest_point() {
         return dest_point;
     }
@@ -103,6 +98,12 @@ public class OfferRide {
     public void setEmail(String email) {
         this.email = email;
     }
+	public String getStart() {
+		return start;
+	}
+	public void setStart(String start) {
+		this.start = start;
+	}
 	
   
 

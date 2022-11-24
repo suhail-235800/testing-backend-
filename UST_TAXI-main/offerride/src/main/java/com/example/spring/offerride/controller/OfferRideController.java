@@ -64,7 +64,7 @@ public class OfferRideController {
         offerride.setName(Details.getName());
         offerride.setV_no(Details.getV_no());
         offerride.setPhone(Details.getPhone());
-        offerride.setStart_point(Details.getStart_point());
+        offerride.setStart(Details.getStart());
         offerride.setDest_point(Details.getDest_point());
         offerride.setStart_time(Details.getStart_time());
         offerride.setDest_time(Details.getDest_time());
@@ -93,5 +93,17 @@ public class OfferRideController {
        
         return offerride;
     }
+   
+   
+   
+   
+   @GetMapping("/offers/{start}")
+   public List<OfferRide> getstartdetails(@PathVariable(value = "start") String start)
+   {
+	   
+	   
+	return offerrideRepository.findAllByStart(start);
+	   
+   }
 }
 
