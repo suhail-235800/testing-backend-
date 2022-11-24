@@ -37,7 +37,7 @@ import com.spring.login.repository.UserRepository;
 import com.spring.login.security.jwt.JwtUtils;
 import com.spring.login.security.services.UserDetailsImpl;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {

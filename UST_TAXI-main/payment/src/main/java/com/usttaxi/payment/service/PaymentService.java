@@ -41,7 +41,7 @@ public class PaymentService {
        vo.setPassenger(passenger);
       
      vo.setOfferRide(offerRide);
-paymentRepo.save(payment);
+     paymentRepo.save(payment);
        return  vo;
 	}
 

@@ -11,42 +11,47 @@ import com.usttaxi.passenger.repo.PassengerRepo;
 @Service
 public class PassengerService {
 	
-	
 	@Autowired
-	private PassengerRepo passengerRepo;
-	
-	 @Autowired
-	 private RestTemplate restTemplate;
-
-	 public Passenger saveUser(Passenger passenger) {
-	        
-	        return passengerRepo.save(passenger);
-	    }
-	 
-	public ResponseTemplateVO getPassengerWithOffer(int tripid) {
-		
-	       ResponseTemplateVO vo = new ResponseTemplateVO();
-	    
-	       Passenger passenger = passengerRepo.findByTripid(tripid);
+    private PassengerRepo passengerRepo;
+    
+     @Autowired
+     private RestTemplate restTemplate;
 
 
-	       OfferRide offerRide =
-	                restTemplate.getForObject("http://OFFERRIDE-SERVICE/offerride/offer/" + tripid
-	                        ,OfferRide.class);
+
+    public Passenger saveUser(Passenger passenger) {
+            
+            return passengerRepo.save(passenger);
+        }
+     
+    public ResponseTemplateVO getPassengerWithOffer(int tripid) {
+        
+           ResponseTemplateVO vo = new ResponseTemplateVO();
+        
+           Passenger passenger = passengerRepo.findByTripid(tripid);
+
+
+
+
+           OfferRide offerRide =
+                    restTemplate.getForObject("http://OFFERRIDE-SERVICE/offerride/offer/" + tripid
+                            ,OfferRide.class);
 passenger.setFee(offerRide.getPrice()*passenger.getKms());
+passenger.setD_name(offerRide.getEmail());
+passenger.setTripid(tripid);
 
 
-	       vo.setPassenger(passenger);
-	       vo.setOfferRide(offerRide);
-	       passengerRepo.save(passenger);
 
 
-	       return  vo;
-	      
-	}
+           vo.setPassenger(passenger);
+           vo.setOfferRide(offerRide);
+           passengerRepo.save(passenger);
 
-	
-	
-	
+
+
+
+           return  vo;
+          
+    }
 
 }

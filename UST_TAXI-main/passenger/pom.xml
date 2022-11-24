@@ -178,6 +178,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>offerride</finalName>
 	</build>
 
 </project>
